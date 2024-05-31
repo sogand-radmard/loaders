@@ -1,0 +1,52 @@
+body{
+    background:  linear-gradient(to right , #ff006e , #8338ec , #3a86ff);
+    background-size: 400% 400%;
+    animation: changeBackground 7s infinite;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@keyframes changeBackground{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+.loader{
+    width: 100px; 
+    height: 100px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    animation: spin 1s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader::after{
+    content: "";
+    width: 80px; 
+    height: 80px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    animation: spin 4s ease-in-out infinite;
+}
+
+@keyframes spin{
+    100%{
+        transform: rotate(360deg);
+    }
+}
